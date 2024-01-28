@@ -1,0 +1,6 @@
+// there is no specific code but we 
+havae learn some command 
+like 
+git init;
+
+and we have download git in this video
