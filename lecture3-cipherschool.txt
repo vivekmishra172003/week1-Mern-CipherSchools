@@ -1,0 +1,196 @@
+these cammand i learn in lecutre 3
+
+
+vivek@check MINGW64 /d/che (master)
+$ git config --global user.email "vivekmishra172003gmail.com"
+
+vivek@check MINGW64 /d/che (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        lecture2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+vivek@check MINGW64 /d/che (master)
+$ git add .
+
+vivek@check MINGW64 /d/che (master)
+$ git commit "lecutuer file 2 is added"
+error: pathspec 'lecutuer file 2 is added' did not match any file(s) known to git
+
+vivek@check MINGW64 /d/che (master)
+$ touch homepage.html
+
+vivek@check MINGW64 /d/che (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   lecture2.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        homepage.html
+
+
+vivek@check MINGW64 /d/che (master)
+$ git add .
+
+vivek@check MINGW64 /d/che (master)
+$ rm homepage.html
+
+vivek@check MINGW64 /d/che (master)
+$ git staus
+git: 'staus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+vivek@check MINGW64 /d/che (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   homepage.html
+        new file:   lecture2.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    homepage.html
+
+
+vivek@check MINGW64 /d/che (master)
+$ git log --oneline
+6531341 (HEAD -> master) initial commit
+
+vivek@check MINGW64 /d/che (master)
+$ checkout reset
+bash: checkout: command not found
+
+vivek@check MINGW64 /d/che (master)
+$ git log
+commit 65313414ec0bf4a12f10920e34d3e0f180906104 (HEAD -> master)
+Author: Vivek Mishra <csewallah404@gmail.com>
+Date:   Sun Jan 28 18:14:40 2024 +0530
+
+    initial commit
+
+vivek@check MINGW64 /d/che (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   homepage.html
+        new file:   lecture2.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    homepage.html
+
+
+vivek@check MINGW64 /d/che (master)
+$ git -m commit "2nd commit"
+unknown option: -m
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--config-env=<name>=<envvar>] <command> [<args>]
+
+vivek@check MINGW64 /d/che (master)
+$ git  commit -m "2nd commit"
+[master a8dba32] 2nd commit
+ 2 files changed, 196 insertions(+)
+ create mode 100644 homepage.html
+ create mode 100644 lecture2.txt
+
+vivek@check MINGW64 /d/che (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    homepage.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+vivek@check MINGW64 /d/che (master)
+$ git log  --onelinne
+fatal: unrecognized argument: --onelinne
+
+vivek@check MINGW64 /d/che (master)
+$ git log  --oneline
+a8dba32 (HEAD -> master) 2nd commit
+6531341 initial commit
+
+vivek@check MINGW64 /d/che (master)
+$ git checkout 6531341
+Note: switching to '6531341'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 6531341 initial commit
+
+vivek@check MINGW64 /d/che ((6531341...))
+$ git log
+commit 65313414ec0bf4a12f10920e34d3e0f180906104 (HEAD)
+Author: Vivek Mishra <csewallah404@gmail.com>
+Date:   Sun Jan 28 18:14:40 2024 +0530
+
+    initial commit
+
+vivek@check MINGW64 /d/che ((6531341...))
+$ git log --oneline
+6531341 (HEAD) initial commit
+
+vivek@check MINGW64 /d/che ((6531341...))
+$ git checkout master
+Previous HEAD position was 6531341 initial commit
+Switched to branch 'master'
+
+vivek@check MINGW64 /d/che (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+vivek@check MINGW64 /d/che (master)
+$ git log
+commit a8dba329d654eeac66785d91c6876403023df1cc (HEAD -> master)
+Author: vivek <vivekmishra172003gmail.com>
+Date:   Sun Jan 28 18:35:43 2024 +0530
+
+    2nd commit
+
+commit 65313414ec0bf4a12f10920e34d3e0f180906104
+Author: Vivek Mishra <csewallah404@gmail.com>
+Date:   Sun Jan 28 18:14:40 2024 +0530
+
+    initial commit
+
+vivek@check MINGW64 /d/che (master)
+$ git log --oneline
+a8dba32 (HEAD -> master) 2nd commit
+6531341 initial commit
+
+vivek@check MINGW64 /d/che (master)
+$ ^C
+
+vivek@check MINGW64 /d/che (master)
+$
