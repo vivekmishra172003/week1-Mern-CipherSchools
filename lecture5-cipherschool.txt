@@ -1,0 +1,9 @@
+**GIT Class-5 Overview**
+in this video we have learned how to use git branch and then we learn how to use git merge andd also we have learned how to give branch name and then merge it to Master
+1. `git branch`: This command is used to list all the branches in your repository.
+
+2. `git merge dev1`: This command is used to merge the changes from the 'dev1' branch into the current branch, which is typically the 'Master' or 'Main' branch.
+
+3. `git branch -d BRANCH_NAME`: This command is used to delete a specified branch, but it should only be used after committing your changes.
+
+4. It's important to note that the 'Master' or 'Main' branch cannot be deleted.
